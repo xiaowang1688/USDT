@@ -1,30 +1,27 @@
-# TRX 智能合约部署教程
+# TRON TRC-20 Token Example — Learning Repository
 
-## 目录
+**Important:** The repository name is historical. This code demonstrates a **custom learning token named MyToken (MTK)**. It is **not USDT, not Tether, not an official stablecoin**, and has no relationship with Tether or any issuer of a stablecoin. **Do not deploy or use with real funds without security review.**
 
-1. 简介
-2. 前提条件
-3. 智能合约编写
-4. 编译智能合约
-5. 配置部署脚本
-6. 部署智能合约
-7. 检查部署状态
-8. 完整代码示例
+中文说明：本仓库仅用于 Solidity / TronBox 的区块链智能合约学习。合约代币名称为 `MyToken`，代号 `MTK`。它**不是官方 USDT，不代表 Tether 官方项目，也不提供稳定币兑换或金融服务**。
 
-## 1. 简介
+## Contents
 
-本教程将详细介绍如何在TRON区块链上编写、编译和部署一个简单的TRC20代币智能合约。我们将使用TronBox工具进行合约的编写和部署。
+- [`MyToken.sol`](MyToken.sol) — teaching example with balances, allowances, transfers, and approval events; not a verified production token implementation
+- [`_deploy_contracts.js`](_deploy_contracts.js) — TronBox deployment migration
+- [`tronbox.js`](tronbox.js) — sample Shasta testnet configuration, including a placeholder private key that must **never** be replaced with a real credential in Git
 
-## 2. 前提条件
+## Intended use
 
-在开始之前，请确保已安装以下工具和环境：
+This repository is a small, unreviewed demonstration. It does not establish contract security, compatibility with all token standards, successful testnet deployment, or commercial experience.
 
-- Node.js
-- TronBox
-- Solidity编译器
-- TRON钱包和测试网（Shasta）账户
+### Safer deployment hygiene
 
-您可以通过以下命令安装TronBox：
+For experimentation, use testnet-only wallets with no meaningful assets, keep all signing keys in local environment variables or a dedicated secret manager, and never commit mnemonic phrases or private keys.
 
-```bash
-npm install -g tronbox
+## Relevant Python automation work
+
+My main GitHub engineering portfolio focuses on Python automation and test development:
+
+- [Python Automation — API Checks & CI](https://github.com/xiaowang1688/python-automation-starter)
+- [Security automation with Mythril and Python](https://github.com/xiaowang1688/smart-contract-vulnerability-scanner)
+- [Portfolio overview](https://github.com/xiaowang1688/python-automation-starter/blob/main/PORTFOLIO.md)
